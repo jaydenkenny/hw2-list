@@ -24,10 +24,12 @@ function renderListItem(label, value){
 
 function renderList(pokemonData) {
     const list = document.createElement('ul')
+    // const lst = [Bulbasaur,Ivysaur,Venusaur,
+    // Charmander,Charmeleon,Charizard,Squirtle,Wartortle,
+    // Blastoise,Caterpie,Metapod,Pikachu,Mew]
     Object.keys(pokemonData).map(function(label){
         const item = renderListItem(label, pokemonData[label])
         list.appendChild(item)
-        
     }) 
 
     return list
