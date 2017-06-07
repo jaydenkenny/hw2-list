@@ -26,7 +26,7 @@ pokemonForm.addEventListener('submit', handleSubmit)
 
 function renderListItem(label, value){
     const item = document.createElement('li')
-    item.innerHTML = `${label}: ${value}`
+    item.innerHTML = ` ${value}`
 
     return item
 }
