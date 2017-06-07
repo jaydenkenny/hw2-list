@@ -10,19 +10,10 @@ function handleSubmit(ev) {
 
     const list = renderList(pokemon)
     details.prepend(renderList(pokemon))
-    //details.appendChild(list)
 }
 
 pokemonForm.addEventListener('submit', handleSubmit)
 
-// function renderColor(color){
-//     const div = document.createElement('div')
-//     div.style.backgroundColor = color
-//     div.style.width = '100px'
-//     div.style.height = '50px'
-
-//     return div
-// }
 
 function renderListItem(label, value){
     const item = document.createElement('li')
@@ -39,11 +30,16 @@ function renderList(pokemonData) {
         
     }) 
 
-  
-    // const parent=document.createElement("div")
-    // const span = document.createElement("span")
-    // parent.appendChild(item)
-    // parent.prepend(span)
-
     return list
 }
+
+const list = document.querySelector('li')
+ function del(item){
+ 	item.preventDefault()
+ 	const f = item.target
+    const deleteButton = document.createElement('button')
+    
+     list.remove()
+ }
+
+list.addEventListener('click', del)

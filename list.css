@@ -36,16 +36,6 @@ button {
     color: white;
 }
 
-.close {
-    position:absolute;
-    right:0;
-    top:0;
-    padding:12px 16px 12px 16px;
-}
-.close:hover {
-    background-color:red;
-    color:white;
-}
 section > div {
   width: 80%;
   margin: 1rem auto;
