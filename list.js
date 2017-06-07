@@ -9,7 +9,7 @@ function handleSubmit(ev) {
     }
 
     const list = renderList(pokemon)
-    details.appendChild(renderList(pokemon))
+    details.prepend(renderList(pokemon))
     //details.appendChild(list)
 }
 
@@ -26,7 +26,7 @@ pokemonForm.addEventListener('submit', handleSubmit)
 
 function renderListItem(label, value){
     const item = document.createElement('li')
-    item.innerHTML = ` ${value}`
+    item.innerHTML = `<strong>${value}</strong>`
 
     return item
 }
@@ -36,9 +36,14 @@ function renderList(pokemonData) {
     Object.keys(pokemonData).map(function(label){
         const item = renderListItem(label, pokemonData[label])
         list.appendChild(item)
-        //list.insertBefore(item)
         
     }) 
+
+  
+    // const parent=document.createElement("div")
+    // const span = document.createElement("span")
+    // parent.appendChild(item)
+    // parent.prepend(span)
 
     return list
 }

@@ -1,16 +1,50 @@
 body {
-    color: red;
     background-image:url("https://ih0.redbubble.net/image.23824316.7736/flat,800x800,075,f.u2.jpg");
     background-repeat: no-repeat;
     background-color: black;
     padding-left:60%;
+    color:red;
 }
 
+ul li{
+    cursor: pointer;
+    position: relative;
+    padding:12px 8px 12px 40px;
+    background:red;
+    font-size:18px;
+    transition:0.2s;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+ul li:nth-child(odd){
+    background-color:grey;
+}
+ul li:hover{
+    background-color:white;
+}
+
+h1 {
+    color:red; 
+}
 label{
     color: grey;
 }
 button {
     color: white;
+}
+
+.close {
+    position:absolute;
+    right:0;
+    top:0;
+    padding:12px 16px 12px 16px;
+}
+.close:hover {
+    background-color:red;
+    color:white;
 }
 section > div {
   width: 80%;
